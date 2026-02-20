@@ -26,7 +26,7 @@ A sleek and user-friendly web application to instantly view GitHub user profiles
 
 ## 🔗 Live Demo
 
-[View Live Demo](https://gauravmishra8595.github.io/Github-profile-viewer)  
+  
 
 https://github-profile-viewer-azure.vercel.app/
 
