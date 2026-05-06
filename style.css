@@ -5,24 +5,28 @@
 }
 
 .main{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .secondDiv{
     display: flex;
+    flex-direction: column;
     background-color: #acf4c3;
-    width: 50%;
+    width: 90%;
+    max-width: 500px;
     padding: 20px;
     min-height: 50%;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
 }
+
 .secondDivHidden{
     display: none;
 }
@@ -32,42 +36,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
+
 .userImg{
     border-radius: 50%;
-    width: 100%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
 }
+
 .userDetail{
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
 }
+
 .userName{
-    font-size: 2em;
+    font-size: 1.5rem;
 }
+
 .userFollow{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 10px;
     align-items: center;
 }
+
 .Follower{
-    display: flex ;
+    display: flex;
     width: 100%;
     justify-content: space-around;
-
+    font-size: 16px;
 }
 
 .repo {
-    font-size: 2em;
+    font-size: 1.5rem;
     text-align: center;
 }
 
-.VisitProile{
+.VisitProfile{
     background-color: rgb(60, 60, 60);
-    width: 80%;
-    height: 10%;
-    font-size: 2rem;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +88,7 @@
     text-decoration: none;
 }
 
+/* Loader stays same */
 .loader {
     width: 48px;
     height: 48px;
@@ -85,8 +98,9 @@
     position: relative;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-  } 
-  .loader::after {
+} 
+
+.loader::after {
     content: '';  
     box-sizing: border-box;
     position: absolute;
@@ -98,13 +112,39 @@
     border-radius: 50%;
     border: 3px solid transparent;
     border-bottom-color: #FF3D00;
-  }
-  
-  @keyframes rotation {
-    0% {
-      transform: rotate(0deg);
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 🔥 Mobile adjustments */
+@media (max-width: 480px) {
+    .secondDiv{
+        width: 95%;
+        padding: 15px;
     }
-    100% {
-      transform: rotate(360deg);
+
+    .userImg{
+        width: 90px;
+        height: 90px;
     }
-  } 
+
+    .userName{
+        font-size: 1.2rem;
+    }
+
+    .userDetail{
+        font-size: 14px;
+    }
+
+    .repo{
+        font-size: 1.2rem;
+    }
+
+    .VisitProile{
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
